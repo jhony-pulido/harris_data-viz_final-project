@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- set styles on the top -->
+    <style>
+        #container1 {
+            width: 1300px;
+            height: 650px;
+            margin-bottom: 20px;
+            font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+        }
+
+        #container2 {
+            width: 1300px;
+            height: 650px;
+            margin-bottom: 20px;
+            font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+            position: relative;
+        }
+
+        #container3 {
+            width: 1300px;
+            height: 650px;
+            margin-bottom: 20px;
+            font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+            position: relative;
+        }
+
+        #container4 {
+            width: 1300px;
+            height: 650px;
+            margin-bottom: 20px;
+            font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+            position: relative;
+        }
+
+        h1 {
+           font-family: georgia;
+           font-style: italic;
+           font-weight: bold;
+           margin-left: 200px;
+        }
+        
+        h2 {
+           /*  margin-left: 20px; */
+        }
+
+        h3 {
+            font-family: arial;
+            font-size: 14px;
+            font-weight: normal;
+            text-align: justify;
+            width:380px;
+        }
+
+        h4 {
+            margin-top: 0;
+            margin-bottom: 0;
+            /* padding-left: 430px; */
+        }
+
+        .legendThreshold{
+            font-size: 12px;
+            font-family: arial;
+            font-weight: 500;
+            width: 100px;
+        }
+
+        .tooltip {
+            font-size: 13px;
+            font-family: arial;
+            font-weight: normal;
+            position: absolute;
+        }
+
+        .tooltip2 {
+            font-size: 11px;
+            font-family: arial;
+            font-weight: normal;
+            position: absolute;
+        }
+
+        .tooltip5 {
+            font-size: 11.5px;
+            font-family: arial;
+            font-weight: normal;
+            position: absolute;
+        }
+
+        .tooltip3 {
+            font-size: 14px;
+            font-weight: normal;
+            font-family: arial;
+            position: absolute;
+        }
+
+        .tooltip4 {
+            font-size: 12px;
+            font-weight: normal;
+            font-family: arial;
+            position: absolute;
+        }
+
+        .cotopaxi_text{
+            font-size: 10px;
+        }
+        
+        .spacing{
+            height: 10px;
+        }
+        /*# is used to refer to ids and . to classes*/
+
+        #graph1{ /*# is used to refer to ids and . to classes*/
+           /*  position: -webkit-sticky;
+            position: sticky; */
+            width: 900px;
+            height: 600px;
+            float: right;
+            }
+        
+        #sections{
+            width: 400px;
+            height: 600px;
+            /* float: left; */
+            }
+
+        #sections0{
+            width: 500px;
+            height: 600px;
+            float: right;
+            }
+        
+        .dropdown {
+            margin-left: 30px;
+            margin-top: 30px;
+        }
+
+        #title_chart-1 {
+            width:900px;
+            height: 20px; 
+        }
+
+        #container3{ /*# is used to refer to ids and . to classes*/
+            height: 800;
+            }
+
+        #graph0{ /*# is used to refer to ids and . to classes*/
+           /*  position: -webkit-sticky;
+            position: sticky; */
+            width: 800px;
+            height: 600px;
+            float: left;
+            }
+
+        #graph2{ /*# is used to refer to ids and . to classes*/
+           /*  position: -webkit-sticky;
+            position: sticky; */
+            width: 900px;
+            height: 600px;
+            float: right;
+            }
+
+        #graph3{ /*# is used to refer to ids and . to classes*/
+           /*  position: -webkit-sticky;
+            position: sticky; */
+            width: 900px;
+            height: 600px;
+            float: right;
+            margin-top: 40px;
+            }
+
+        #graph4{ /*# is used to refer to ids and . to classes*/
+           /*  position: -webkit-sticky;
+            position: sticky; */
+            width: 900px;
+            height: 600px;
+            float: right;
+            }
+
+        .checkbox{
+            margin-left: 45px;
+            margin-top: 30px;
+        }
+
+        .routes{
+            stroke-width: 0.5px;
+            fill: none;
+        }
+
+        #urban{
+            float: left;
+        }
+        
+/*         #sections > div.graph-scroll-active{
+            opacity: 1;
+            } */
+
+
+    </style>
+</head>
+
+<body>
+    <div id="container1" class="chart-container">
+        <h1 class="headline">
+           Geographical concentration and public policy
+        </h1>
+        
+        <h2 class="subheader">
+            Despite its size, Quito is a highly greographically concentrated city
+        </h2>
+
+        <div id = "title-chart-0">
+            <!-- <h4> Distance between the center of each area and the nearest public service</h4> -->
+            <h4> Population density</h4>
+        </div>
+        <div id="graph0"></div>
+
+        <div id="sections0">   </div> 
+    </div>
+
+    <div class="spacing">  </div>
+
+    <div id="container2" class="chart-container">   
+        <h2 class="subheader">
+            Implications of this geographical concentration
+         </h2>
+
+        <div id = "title-chart-1">
+            <!-- <h4> Distance between the center of each area and the nearest public service</h4> -->
+            <h4> Accesibility to public goods and services</h4>
+        </div>
+            <div id="graph1"></div>
+
+            <div id="sections"> 
+                <h3> 
+                    Given that most of the population lives in or near the central areas of the city, we can expect government efforts for providing public goods and services to be more concentrated in that part of the territory. This makes sense from a political perspective given that most of the voters live in those areas. It is also consistent from a policy standpoint if we take into account that there might still be a greater number of vulnerable population living in highly-densed populated areas. <br>
+                    <br>
+                    We observe some <i>suggestive</i> evidence towards that direction in the charts at the right side. As expected, urban areas have a higher accesibility to education, health, and other social services, measured by the distance between the center of each area and the nearest provider. We point out this observation because areas in the peripheries have consistently darker shades of red.  <br> 
+                    <br>
+                    The differences between urban and rural areas seem to be smaller in the case of proximity to schools and become considerable starker in the other categories. For instance, while most urban zones have an early childhood center less than 1 kilometer away, this distance increases to at least 5 kilometers in most areas of the periphery. Distances to hospitals are even larger, with most being located more than 10 kilometers away from the centers if the non-urban territories. <br> 
+                    <br>
+                    Despite these clear patterns, information regarding distances should be combined with other type of information to construct a better idea about differences in accesibility. Larger distances might not necessarily indicate much lower levels of accesibility if, for example, households living in the peripheries have enough accesibility to public transportation. However, as we will show in the following section, this is not always the case. <br>                    
+                </h3> 
+
+            </div>
+        <!-- </div>  -->  
+    </div>
+
+    <div class="spacing">  </div>
+
+    <div id="container3" class="chart-container">   
+        
+        <div id = "title-chart-2">
+            <h4> Public transport connectivity </h4>
+        </div> 
+
+            <div id="graph2"></div> 
+                
+            <div id="sections"> 
+                <h3>
+                    Transportation is another relevant aspect to understand accesibility. We can expect that the geographic distribution of the population also leads to a lower provision of these services in the peripheries. Even though households located in these places have higher economic vulnerability and are located further from areas that might offer more job opportunities, there might still be a higher demand in urban areas due to higher amount of people living there. Furthermore, prioritizing public transport provision in highly-densed populated areas can also be a more attractive decision in terms of public policy because it will also improve the traffic flow, which has implications in terms of commuting times and pollution. <br>
+                    <br>
+                    Once we plot in the map all the routes belonging to the public transportation system, we can in fact observe that there is a higher prevalance of public transport provision in the central territory. There is even an overlap in many areas. Regarding the rural areas, we only observe some provision in the eastern, south-eastern, and western sectors, while the northern territories do not seem to have access to this government service. <br>      
+                    <br>
+                    The absence of public transport might have several implications for the residents of those areas. For instance, it increases their dependence on private providers, which might set higher prices and may not comply with transport regulations since it might be more difficult or costly for governments to use enforcement in hard-to-reach areas. Furthermore, if some of these areas also lack the presence of private providers, it would be even more difficult for them to access the public services listed in the map above.
+                </h3>      
+            </div>         
+    </div>
+
+    <div id="container4" class="chart-container">   
+        
+        <div id = "title-chart-3">
+            <h4> Could the lower connectivity to public transport be affecting rural areas? </h4>
+        </div> 
+
+            <div id="graph3"></div> 
+                
+            <div id="sections"> 
+                <h3>
+                    The map at the right side shows the share of household that declared needing to commute out of their district in order to work. Districts are the official geographic unit division of Quito and are composed by several areas, which explains why the urban regions remain with a very low percentage. Thus, for urban areas, this information is not very useful. However, districts and mobility areas coincide in most cases of the periphery due to their low population density, making the data about commuting accurate in these cases. <br>
+                    <br>
+                    We can appreciate that there is a great propensity to commute in the rural areas. Therefore, these territories could benefit from a higher provision of public transport, especially in the northern areas. 
+                        
+                </h3>      
+            </div>         
+    </div>
+
+   
+
+</body>
+
+<!-- we're using d3 version 6 (the latest version) for all out work -->
+<script src="https://d3js.org/d3.v6.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-array@3"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-geo@3"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-geo-projection@4"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<!-- <script src="Choropleth.js"></script> --> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.24.0/d3-legend.js"></script>
+<script>
+
+/* const projection = d3.geoAitoff(); */
+const projection = d3.geoEqualEarth();
+/* const path = d3.geoPath(projection); */
+</script>
+<!-- we need to upload this library to work with topoJson files -->
+<script src="https://unpkg.com/topojson@3"></script>
+
+<script>
+    //------------------------1. PREPARATION------------------------//
+            //-----------------------------SVG------------------------------//
+            // Define width and height:
+            let width = 1050;
+            let height = 550;
+
+            // Define the svgs:
+            let svg = d3.select("#container1 #graph0").append("svg")
+                .attr("width", 800)
+                .attr("height", 600)
+                .attr("margin-top", 200 + "px")
+
+            let svg1_2 = d3.select("#container1 #sections0").append("svg")
+                .attr("width", 300)
+                .attr("height", 600)
+                .attr("margin-top", 200 + "px")
+
+            let svg2 = d3.select("#container2 #graph1").html("").append("svg")
+                .attr("width",900)
+                .attr("height",600)
+                .attr("margin-top",40 + "px")
+
+            let svg3 = d3.select("#container3 #graph2").html("").append("svg")
+                .attr("class","svg3")
+                .attr("width",900)
+                .attr("height",600)
+                .attr("margin-top",40 + "px")
+
+            let svg4 = d3.select("#container4 #graph3").html("").append("svg")
+                .attr("class","svg4")
+                .attr("width",900)
+                .attr("height",600)
+                .attr("margin-top",40 + "px")
+
+            //Define margins
+            let margin = {top: 30, right: 20, bottom: 10, left: 0};
+
+            //-----------------------------DATA------------------------------//
+            Promise.all([
+                d3.json("quito_base.json"), //loading the geojson data. This type of data has two elements: FeatureCollection (geography) and Features (data itself) 
+                d3.json("rutas.json") //loading the geojson data. This type of data has two elements: FeatureCollection (geography) and Features (data itself) 
+            ])
+                .then(ready)
+                .catch((err) => {
+                    console.log(err);
+                });
+
+        function ready(res) {
+                console.log(res[0])
+                let raw = res[0]
+                console.log(res[1])
+                let raw2 = res[1]
+                
+                //When working with topojson, we need to decode further the data
+                let layer = topojson.feature(raw,raw.objects.quito_base)
+                let urban_routes = topojson.feature(raw2,raw2.objects.rutas_urbanas) 
+                let intrastate_routes = topojson.feature(raw2,raw2.objects.rutas_intracantonales) 
+                let int_system_routes = topojson.feature(raw2,raw2.objects.sistema_integrado) 
+                let subway = topojson.feature(raw2,raw2.objects.tunel_metro) 
+                let other_routes = topojson.feature(raw2,raw2.objects.rutas_otras) 
+                //let layer = topojson.feature(raw,raw.objects.edm_zones)  
+                //let state = topojson.feature(raw,raw.objects.state)
+                /* let california = topojson.feature(county,county.features.filter(d => d.properties.state_name =="California"))
+                let data = topojson.feature(county,county.features) */
+                
+                console.log(layer)
+                console.log(urban_routes)
+                //console.log(data)
+                //console.log(county.features.properties.NAME)
+                //console.log(county.features.properties.pop_18_in_poverty)
+             
+
+                //-----------------------------MAP------------------------------//
+                //Two main things are needed to generate a map: generate a path and define a projection:
+                //Define a projection:
+                let myProjection = d3.geoEqualEarth()
+                    .fitSize([width, height],layer)   
+
+                //Generate a path function
+                let path = d3.geoPath()
+                    .projection(myProjection) //assigning the projection
+
+                //color scale to make a choropleth     
+                colorScale = d3.scaleThreshold()
+                    .domain([1000, 4000, 8000, 15000])
+                    .range(d3.schemeReds[5]);
+                
+                colorScale2 = d3.scaleThreshold()
+                    .domain([1000, 2000, 5000, 10000])
+                    .range(d3.schemeReds[5]);
+
+                colorScale3 = d3.scaleThreshold()
+                    .domain([0.1, 0.25, 0.5, 0.75])
+                    .range(d3.schemeReds[5]);
+
+                //-----------------------------TOOLTIP------------------------------//
+                let tooltip = d3.select("body").append("div") 
+                    .attr("class", "tooltip")               
+
+                let tooltip1_2 = d3.select("body").append("div") 
+                    .attr("class", "tooltip")               
+
+                let tooltip1_3 = d3.select("body").append("div") 
+                    .attr("class", "tooltip2")               
+
+                let tooltip1_4 = d3.select("body").append("div") 
+                    .attr("class", "tooltip2")               
+
+                let tooltip1_5 = d3.select("body").append("div") 
+                    .attr("class", "tooltip2")               
+
+                let tooltip1_6 = d3.select("body").append("div") 
+                    .attr("class", "tooltip")               
+
+                let tooltip1_7 = d3.select("body").append("div") 
+                    .attr("class", "tooltip2")               
+
+                let tooltip4 = d3.select("#graph1").append("div") 
+                    .attr("class", "tooltip3")               
+
+                let tooltip2_1 = d3.select("#graph1").append("div") 
+                    .attr("class", "tooltip5")   
+                
+                let tooltip2_2 = d3.select("#graph1").append("div") 
+                    .attr("class", "tooltip5")  
+
+                let tooltip6 = d3.select("#graph1").append("div") 
+                    .attr("class", "tooltip")
+
+                //-----------------------------DROPDOWN MENU------------------------------//
+                
+                var dropdown_options = [ 
+                    { value: "dist_nearest_school",
+                    text: "School" },
+                    { value: "dist_nearest_cibv",
+                    text: "Early childhood center" },
+                    { value: "dist_nearest_health_center",
+                    text: "Health center" },
+                    { value: "dist_nearest_hospital",
+                    text: "Hospital" },
+                    { value: "dist_elder_attention",
+                    text: "Elder support center" },
+                    { value: "dist_gender_support",
+                    text: "Support for victims of gender violence" },
+                    { value: "dist_sports_field",
+                    text: "Sports field" },
+                    { value: "dist_park",
+                    text: "Park" }
+                ]
+                
+                console.log(dropdown_options[1])
+
+                // populate drop-down
+                d3.select("#dropdown")
+                    .selectAll("option")
+                    .data(dropdown_options)
+                    .enter()
+                    .append("option")
+                    .attr("value", function(option) { return option.value; })
+                    .text(function(option) { return option.text; });
+
+
+                //-----------------------------CHECK-BOXES------------------------------//
+              /*   let urbanRoutesClicked = function () { */
+                let route = svg3.append("g")
+                
+                let addUrbanRoutes = function(data) {
+                      route
+                        .selectAll("#routes-other-urban")
+                        .data(data.features)
+                        .join("path")
+                        .attr("class", "routes")
+                        .attr("id", "routes-other-urban")
+                        .attr("d",path)
+                        .style("stroke","blue")
+                        .style("opacity",1)  
+                    }
+                    
+                let unaddUrbanRoutes = function(data) {
+                    route
+                        .selectAll("#routes-other-urban")
+                        .data(data.features)
+                        .join("path")
+                        .attr("class", "routes")
+                        .attr("id", "routes-other-urban")
+                        .attr("d",path)
+                        .style("stroke","blue")
+                        .style("opacity",0)
+                    }
+                
+                let addIntrastateRoutes = function(data) {
+                      route
+                        .selectAll("#routes-intrastate")
+                        .data(data.features)
+                        .join("path")
+                        .attr("class", "routes")
+                        .attr("id", "routes-intrastate")
+                        .attr("d",path)
+                        .style("stroke","orange")
+                        .style("stroke-width",1.5)
+                        .style("opacity",1)  
+                    }
+                    
+                let unaddIntrastateRoutes = function(data) {
+                    route
+                        .selectAll("#routes-intrastate")
+                        .data(data.features)
+                        .join("path")
+                        .attr("class", "routes")
+                        .attr("id", "routes-intrastate")
+                        .attr("d",path)
+                        .style("stroke","green")
+                        .style("opacity",0)
+                    }
+
+                let addIntegratedSystem = function(data) {
+                      route
+                        .selectAll("#routes-other")
+                        .data(data.features)
+                        .join("path")
+                        .attr("class", "routes")
+                        .attr("id", "routes-other")
+                        .attr("d",path)
+                        .style("stroke","magenta")
+                        .style("stroke-width",1.5)
+                        .style("opacity",1)  
+                    }
+                    
+                let unaddIntegratedSystem = function(data) {
+                    route
+                        .selectAll("#routes-other")
+                        .data(data.features)
+                        .join("path")
+                        .attr("class", "routes")
+                        .attr("id", "routes-other")
+                        .attr("d",path)
+                        .style("stroke","purple")
+                        .style("opacity",0)
+                    }
+
+                let addSubway = function(data) {
+                      route
+                        .selectAll("#subway")
+                        .data(data.features)
+                        .join("path")
+                        .attr("id", "subway")
+                        .attr("d",path)
+                        .style("stroke","red")
+                        .style("opacity",1)  
+                        .style("fill","none")
+                        .style("stroke-width",3)
+                    }
+                    
+                let unaddSubway = function(data) {
+                    route
+                        .selectAll("#subway")
+                        .data(data.features)
+                        .join("path")
+                        .attr("id", "subway")
+                        .attr("d",path)
+                        .style("stroke","red")
+                        .style("opacity",0)
+                        .style("fill","none")
+                        .style("stroke-width",1)
+                    }
+
+                    let addOthers = function(data) {
+                      route
+                        .selectAll("#others")
+                        .data(data.features)
+                        .join("path")
+                        .attr("id", "others")
+                        .attr("d",path)
+                        .style("stroke","blue")
+                        .style("opacity",0.7)  
+                        .style("fill","none")
+                        .style("stroke-width",1)
+                    }
+                    
+                let unaddOthers = function(data) {
+                    route
+                        .selectAll("#others")
+                        .data(data.features)
+                        .join("path")
+                        .attr("id", "others")
+                        .attr("d",path)
+                        .style("stroke","blue")
+                        .style("opacity",0)
+                        .style("fill","none")
+                        .style("stroke-width",1)
+                    }
+
+                //------------------------2. DISPLAY------------------------//
+                //-----------------------------MAP------------------------------/
+                
+                //Map:
+                let quito = svg.append("g") 
+                    .selectAll(".zones")
+                    .data(layer.features)
+                    .join("path")
+                    .attr("class", function(d){
+                        return d.properties.CODNUEVZON
+                    })
+                    .attr("d",path)
+                    .style("stroke","black")
+                    .style("stroke-width",0.1)
+                    //.style("opacity",0.5)
+                    .style("user-select", "none")
+                    .attr("fill",function(d){
+                        return colorScale(d.properties.pobXKm2)
+                    })
+                
+                //Legend:
+                //First append a box in the SVG:
+                let g = svg.append("g")
+                    .attr("class", "legendThreshold")
+                    .attr("transform", "translate(20,20)")
+                    .attr("width",100+"px")
+                
+                //Then add the legend title
+                g.append("text")
+                    .attr("class", "caption")
+                    .attr("x", 0)
+                    .attr("y", -6)
+                    .text("Habitants per squared kilometer")
+                 
+                let labels = ['1 - 1,000', '1,001 - 4,000', '4,001 - 8,000', '8,001 - 15,000', '> 15,000', ]
+                
+                let legend = d3.legendColor()
+                    .labels(function (d) { 
+                        return labels[d.i] 
+                    })
+                    .shapePadding(1)
+                    .scale(colorScale)
+                
+                svg.select(".legendThreshold")
+                    .call(legend);
+
+                g.append("text")
+                    .attr("x", 350 )
+                    .attr("y", 540 )
+                    .text("This map divides the Metropolitan District of Quito in 658 zones according to Quito's 2016 Mobility Survey")
+                    .attr("stroke","#black")
+                    .attr("font-size",9)
+                    .attr("opacity",0.5)
+                 
+ 
+                let message1_4 = "The western row of Andean Mountains in Ecuador (called <br> the 'Cordillera Occidental') crosses completely Quito from <br> south to north. This explains the low population density in <br> the northern  and western areas of the city."
+                tooltip1_4.html(message1_4)
+                    .style("left", 25 + "px")
+                    .style("top", 270 + "px")
+
+                let message1_3 = " You can have a better idea of the mountain belt path by <br> looking at the abrupt difference in population density <br>  between the areas in the end of the center and the <br> beginning of the west."
+                tooltip1_3.html(message1_3)
+                    .style("left", 25 + "px")
+                    .style("top", 350 + "px") 
+
+                svg
+                    .append('path')
+                    .attr('d', d3.line()([[540, 260], [290, 230]]))
+                    .attr('stroke', 'black')
+                    .attr('marker-start', 'url(#arrow)')
+                    .attr('fill', 'none')
+                    .attr("stroke-width",0.5)
+                    .attr("opacity",0.75)
+
+                /* svg
+                    .append('path')
+                    .attr('d', d3.line()([[310, 140], [500, 70]]))
+                    .attr('stroke', 'black')
+                    .attr('marker-start', 'url(#arrow)')
+                    .attr('fill', 'none')
+                    .attr("stroke-width",0.5)
+                    .attr("opacity",0.75) */
+
+                let message1_5 = "Meanwhile, the eastern and southeastern areas are limited <br> by the 'Cordillera Real', which is the second mountain belt <br> belonging to the Andean Mountains. "
+                tooltip1_5.html(message1_5)
+                    .style("left", 25 + "px")
+                    .style("top", 450 + "px")
+
+               /*  svg
+                    .append('path')
+                    .attr('d', d3.line()([[310, 250], [700, 350]]))
+                    .attr('stroke', 'black')
+                    .attr('marker-start', 'url(#arrow)')
+                    .attr('fill', 'none')
+                    .attr("stroke-width",0.5)
+                    .attr("opacity",0.75) */
+
+                /* let message1_6 = "As we will see below, this arrangement might have several <br> relevant implications in the way resources are distributed <br> in the city through public services and goods, prioritizing <br> high-densed populated areas over those located in the <br> rural territories of the city."
+                tooltip1_6.html(message1_6)
+                    .style("left", 25 + "px")
+                    .style("top", 470 + "px") */
+
+                let urban= svg1_2.append("image")
+                    .attr("xlink:href", "urban.svg")
+                    .attr("x", "80")
+                    .attr("y", "80")
+                    .attr("width", "100")
+                    .attr("height", "200")
+
+                svg1_2
+                    .append('path')
+                    .attr('d', d3.line()([[200, 170], [250, 170]]))
+                    .attr('stroke', 'black')
+                    .attr('marker-start', 'url(#arrow)')
+                    .attr('fill', 'none')
+                    .attr("stroke-width",1.5)
+                    .attr("opacity",0.75)
+
+                let message = "<b> This area barely represents 8% of the city's <br> surface but contains 92% of its population. <br> It represents the <u> urban area </u> of Quito </b>"
+                tooltip.html(message)
+                    .style("left", 1070 + "px")
+                    .style("top", 300 + "px")
+
+                let rural= svg1_2.append("image")
+                    .attr("xlink:href", "rural.svg")
+                    .attr("x", "0")
+                    .attr("y", "250")
+                    .attr("width", "200")
+                    .attr("height", "300")
+
+                svg1_2
+                    .append('path')
+                    .attr('d', d3.line()([[200, 350], [250, 350]]))
+                    .attr('stroke', 'black')
+                    .attr('marker-start', 'url(#arrow)')
+                    .attr('fill', 'none')
+                    .attr("stroke-width",1.5)
+                    .attr("opacity",0.75)
+                
+                let message1_2 = "<b> The rest areas cover 92%  of the surface <br> but only contains 8% of the population. <br> It is mainly composed by the <u> rural part  <br> </u> of the territory  </b>"
+                tooltip1_2.html(message1_2)
+                    .style("left", 1070 + "px")
+                    .style("top", 480 + "px")
+                
+                //Chart 2: Distance between the center of each area and the nearest public service
+                let updateMap = function(variable) {
+                    console.log("variable used: " + variable)
+                    let map = svg2.append("g")
+                        .selectAll(".zones")
+                        .data(layer.features)
+                        .join("path")
+                        .attr("class", function(d){
+                            return d.properties.CODNUEVZON
+                            })
+                        .attr("d",path)
+                        .style("stroke","black")
+                        .style("stroke-width",0.1)
+                        .style("user-select", "none")
+                        .attr("fill",function(d){
+                            return colorScale2(d.properties[variable])
+                            })
+                        .on("mouseover",function(event,d){
+                            map
+                                .style("stroke","black")
+                                .style("stroke-width",0.1)
+                                .style("user-select", "none")
+                                .attr("fill",function(d){
+                                    return colorScale2(d.properties[variable])
+                                    })
+                                   
+                            d3.select(this)
+                                .style("stroke","black")
+                                .style("stroke-width",0.1)
+                                .style("user-select", "none")
+                                .attr("fill","yellow")
+                                .raise()
+                                let message4 = "The closest service is located " + "<br> <b>" + d3.format(",.0f")(d.properties[variable]) + " meters " + "</b>away from <br>" + "the center of this area"
+                            tooltip4.html(message4)
+                                .style("left", 1080 + "px")
+                                .style("top", 130 + "px")
+                                .style("opacity",1)
+                        })
+                        .on("mouseout", function(event, d){
+                            map
+                                .style("stroke","black")
+                                .style("stroke-width",0.1)
+                                .style("user-select", "none")
+                                .attr("fill",function(d){
+                                    return colorScale2(d.properties[variable])
+                                    })
+                                .attr("font-size",15)
+
+                            tooltip4
+                                .style("left", 520 + "px")
+                                .style("top", 230 + "px")
+                                .style("opacity",0)
+                        })
+                    
+                    //Legend:
+                    //First append a box in the SVG:
+                    let g = svg2.append("g")
+                        .attr("class", "legendThreshold")
+                        .attr("transform", "translate(30,20)");
+                    
+                    //Then add the legend title
+                    g.append("text")
+                        .attr("class", "caption")
+                        .attr("x", 0)
+                        .attr("y", -6)
+                        .text("Distance (meters)")
+
+                    let labels = ['1 - 1,000', '1,001 - 2,000', '2,001 - 5,000', '5,001 - 10,000', '> 10,000']
+                
+                    let legend = d3.legendColor()
+                        .labels(function (d) { 
+                            return labels[d.i] 
+                        })
+                        .shapePadding(4)
+                        .scale(colorScale)
+                
+                    svg2.select(".legendThreshold")
+                        .call(legend);
+                        
+                        // Update old ones, already have x / width from before
+                    map
+                        .transition().duration(250)
+
+                    // Remove old ones
+                    map.exit().remove();
+
+                    g.append("text")
+                        .attr("x", 350 )
+                        .attr("y", 540 )
+                        .text("This map divides the Metropolitan District of Quito in 658 zones according to Quito's 2016 Mobility Survey")
+                        .attr("stroke","#black")
+                        .attr("font-size",9)
+                        .attr("opacity",0.5)
+
+                    let message2_1 = "<b> Urban areas seem to have higher accesibility to health,<br> education, and other social services. </b> Most have at least <br> one provider located less than 1 kilometer away from the <br> center of the area "
+                    tooltip2_1.html(message2_1)
+                        .style("left", 450 + "px")
+                        .style("top", 330 + "px")
+
+                    let message2_2 = "However, this interpretation does not consider other <br> potentially important aspects such as transport costs and <br> connectivity. Another caveat is that we are considering <br> distances to the center of each area, which might be a <br> noiser proxy for household concentration in the case of <br> rural territories due to their larger geographical extension"
+                    tooltip2_2.html(message2_2)
+                        .style("left", 450 + "px")
+                        .style("top", 390 + "px")
+
+                    let message6 = "<b>You can consult the exact distances by moving <br> the mouse over the areas in the map </b>"
+                    tooltip6.html(message6)
+                        .style("left", 430 + "px")
+                        .style("top", 230 + "px")
+
+                    let tooltip_title = d3.select("#graph1").append("div") 
+                        .attr("class", "tooltip")               
+                        .style("opacity", 1)
+                        .style("position", "absolute")
+                        .style("font-weight", "normal")
+                        .style("font-size", 8)
+                    
+                    let title = "<b>Distance between the center of each area and the nearest public good or service </b>"
+                    tooltip_title.html(title)
+                        .style("left", 430 + "px")
+                        .style("top", 80 + "px")
+                }
+
+                // Get names of options, for dropdown
+                var dropdown = d3.select("#graph1")
+                    .insert("select", "svg")
+                    .attr("class","dropdown")
+                    .on("change", function() {
+                        console.log("this is working")
+                        updateMap(d3.select(this).property('value'))
+                    })
+                        
+                dropdown.selectAll("option")
+                    .data(dropdown_options)
+                    .enter()
+                    .append("option")
+                    .attr("value", function(option) { return option.value; })
+                    .text(function(option) { return option.text; })
+
+                var initialData = dropdown_options[0].value
+                console.log(initialData)
+                updateMap(initialData)
+
+
+            //Chart 3
+                let map3 = svg3.append("g") 
+                    .selectAll(".zones")
+                    .data(layer.features)
+                    .join("path")
+                    .attr("class", function(d){
+                        return d.properties.CODNUEVZON
+                    })
+                    .attr("d",path)
+                    .style("stroke","black")
+                    .style("stroke-width",0.1)
+                    .style("user-select", "none")
+                    .attr("fill","#eee")
+                    .attr("margin-left",20 + "px")
+                    .attr("opacity",0.3)
+                    //.attr("margin-bottom",-30 + "px")
+                
+                //Adding checkboxes
+                //Subway:   
+                var checkbox_subway = d3.select("#graph2")
+                    .insert("checkbox","svg")
+                    .append("input")
+                        .attr("class","checkbox")
+                        .attr("id", "checkbox4")
+                        .attr("type","checkbox")
+                        .on("click", function( event) {
+                            if (this.checked===true) {
+                                console.log("checkbox on working")
+                                addSubway(subway)
+                            } else {
+                                console.log("checkbox off working")
+                                unaddSubway(subway)
+                            }
+                        })
+                
+                let tooltip10 = d3.select("#container3").append("div") 
+                    .attr("class", "tooltip4")               
+                    .style("opacity", 1)
+                    .style("position", "absolute")
+                    //.style("font-weight", "normal")
+                    .style("font-size", 8)
+
+                let message10 = "Subway"
+                    tooltip10.html(message10)
+                        /* .style("left", 600 + "px") */
+                        .style("top", 65 + "px")
+                        .style("left", 435 + "px")
+                        .style("text-align", "center")
+                
+                //Integrated system:   
+                var checkbox_integratedSystem = d3.select("#graph2")
+                    .insert("checkbox","svg")
+                    .append("input")
+                        .attr("class","checkbox")
+                        .attr("id", "checkbox3")
+                        .attr("type","checkbox")
+                        .attr("top",10 + "px")
+                        .on("click", function( event) {
+                            if (this.checked===true) {
+                                console.log("checkbox on working")
+                                addIntegratedSystem(int_system_routes)
+                            } else {
+                                console.log("checkbox off working")
+                                unaddIntegratedSystem(int_system_routes)
+                            }
+                        })
+                
+                let tooltip9 = d3.select("#container3").append("div") 
+                    .attr("class", "tooltip4")               
+                    .style("opacity", 1)
+                    .style("position", "absolute")
+                    //.style("font-weight", "normal")
+                    .style("font-size", 8)
+
+                let message9 = "Integrated <br> system <br> routes <br> (buses)"
+                    tooltip9.html(message9)
+                        /* .style("left", 540 + "px") */
+                        .style("left", 485 + "px")
+                        .style("top", 65 + "px")
+                        .style("text-align", "center")
+                
+                //Intrastate:   
+                var checkbox_intraState = d3.select("#graph2")
+                    .insert("checkbox","svg")
+                    .append("input")
+                        .attr("class","checkbox")
+                        .attr("id", "checkbox2")
+                        .attr("type","checkbox")
+                        .on("click", function( event) {
+                            if (this.checked===true) {
+                                console.log("checkbox on working")
+                                addIntrastateRoutes(intrastate_routes)
+                            } else {
+                                console.log("checkbox off working")
+                                unaddIntrastateRoutes(intrastate_routes)
+                            }
+                        })
+                
+                let tooltip8 = d3.select("#container3").append("div") 
+                    .attr("class", "tooltip4")               
+                    .style("opacity", 1)
+                    .style("position", "absolute")
+                    //.style("font-weight", "normal")
+                    .style("font-size", 8)
+
+                let message8 = "Intrastate <br> routes <br> (buses)"
+                    tooltip8.html(message8)
+                        /* .style("left", 485 + "px") */
+                        .style("left", 547 + "px")
+                        .style("top", 65 + "px")
+                        .style("text-align", "center")
+
+                //Urban:
+                var checkbox_others = d3.select("#graph2")
+                    .insert("checkbox","svg")
+                    .append("input")
+                        .attr("class","checkbox")
+                        .attr("id", "checkbox1")
+                        .attr("type","checkbox")
+
+                        .on("click", function( event) {
+                            if (this.checked===true) {
+                                console.log("checkbox on working")
+                                addOthers(other_routes)
+                            } else {
+                                console.log("checkbox off working")
+                                unaddOthers(other_routes)
+                            }
+                        })
+                
+                let tooltip7 = d3.select("#container3").append("div") 
+                    .attr("class", "tooltip4")               
+                    .style("opacity", 1)
+                    .style("position", "absolute")
+                    //.style("font-weight", "normal")
+                    .style("font-size", 8)
+
+                let message7 = " Other <br> urban <br> routes <br> (buses)"
+                    tooltip7.html(message7)
+                        /* .style("left", 440 + "px") */
+                        .style("left", 615 + "px")
+                        .style("top", 65 + "px")
+
+                //title    
+                let tooltip12 = d3.select("#container3").append("div") 
+                    .attr("class", "tooltip")               
+                    .style("opacity", 1)
+                    .style("position", "absolute")
+                    //.style("font-weight", "normal")
+                    .style("font-size", 8)
+
+                let title3 = "<b> Public transport routes operating in the Metropolitan Area of Quito </b>"
+                    tooltip12.html(title3)
+                        .style("left", 440 + "px")
+                        .style("top", 30 + "px")
+                        .style("text-align", "center")
+                
+                svg3.append("text")
+                    .attr("x", 440 )
+                    .attr("y", 560 )
+                    .text("This map divides the Metropolitan District of Quito in 658 zones according to Quito's 2016 Mobility Survey")
+                    .attr("stroke","#black")
+                    .attr("font-size",9)
+                    .attr("opacity",0.4)
+                    .attr("font-family", "arial")
+
+                let tooltip13 = d3.select("#container3").append("div") 
+                    .attr("class", "tooltip5")               
+                    .style("opacity", 1)
+                    .style("position", "absolute")
+                    //.style("font-weight", "normal")
+                    .style("font-size", 8)
+                
+                let message12 = "<b> Rural areas seem to have, indeed, <br> weaker public transport connectivity. </b> "
+                
+                tooltip13.html(message12)    
+                    .style("left", 450 + "px")
+                    .style("top", 150 + "px")
+                    //.style("text-align", "center")
+
+                let tooltip14 = d3.select("#container3").append("div") 
+                    .attr("class", "tooltip5")               
+                    .style("opacity", 1)
+                    .style("position", "absolute")
+                    //.style("font-weight", "normal")
+                    .style("font-size", 8)
+                
+                let message13 = "<b> Northern areas in the periphery seem to lack <br> provision of public transport. </b> This might be <br> making commutings more costly, as residents <br> from these parts depend on private providers <br> operating outside the regulation of the <br> transport authority. This might be hampering <br> not only their access to public services, but <br> also to job opportunities "
+                
+                tooltip14.html(message13)    
+                    .style("left", 450 + "px")
+                    .style("top", 200 + "px")
+                
+               /*  let tooltip15 = d3.select("#container3").append("div") 
+                    .attr("class", "tooltip5")               
+                    .style("opacity", 1)
+                    .style("position", "absolute")
+                    .style("font-size", 8)
+                
+                let message14 = "<b> Northern areas in the periphery seem to <br> lack provision of public transport. </b> This <br> might be making commutings more costly, <br> as residents from this area depend on <br> providers operating outside the regulation <br> of the transport authority"
+                
+                tooltip15.html(message14)    
+                    .style("left", 500 + "px")
+                    .style("top", 200 + "px") */
+            
+
+                let map4 = svg4.append("g") 
+                    .selectAll(".zones")
+                    .data(layer.features)
+                    .join("path")
+                    .attr("class", function(d){
+                        return d.properties.CODNUEVZON
+                    })
+                    .attr("d",path)
+                    .style("stroke","black")
+                    .style("stroke-width",0.1)
+                    //.style("opacity",0.5)
+                    .style("user-select", "none")
+                    .attr("fill",function(d){
+                        if (d.properties.transport==null){
+                            return "gray"
+                        } else{
+                           return colorScale3(d.properties.transport) 
+                        }
+                    })
+                      
+                let g4 = svg4.append("g")
+                    .attr("class", "legendThreshold")
+                    .attr("transform", "translate(20,0)")
+                
+                //Then add the legend title
+          
+                let labels4 = ['0 - 10%', '10.01% - 25%', '25.01% - 50%', '50.01% - 75%', '> 75%', "No information"]
+                
+                let legend4 = d3.legendColor()
+                    .labels(function (d) { 
+                        return labels4[d.i] 
+                    })
+                    .shapePadding(1)
+                    .scale(colorScale3)
+                
+                svg4.select(".legendThreshold")
+                    .call(legend4);   
+                    
+                let tooltip15 = d3.select("#container4").append("div") 
+                    .attr("class", "tooltip")               
+                    .style("opacity", 1)
+                    .style("position", "absolute")
+                    //.style("font-weight", "normal")
+                    .style("font-size", 8)
+                
+                let title4 = "<b>  % of households that need to commute out of their district to work. </b>"
+                
+                tooltip15.html(title4)    
+                    .style("left", 420 + "px")
+                    .style("top", 35 + "px")
+                
+                let tooltip16 = d3.select("#container4").append("div") 
+                    .attr("class", "tooltip4")               
+                    .style("opacity", 1)
+                    .style("position", "absolute")
+                    .style("font-size", 8)
+                
+                let message17 = "Gray shaded areas have no value for this variable"
+                
+                tooltip16.html(message17)    
+                    .style("left", 420 + "px")
+                    .style("top", 140 + "px")
+                  
+                let tooltip17 = d3.select("#container4").append("div") 
+                    .attr("class", "tooltip2")               
+                    .style("opacity", 1)
+                    .style("position", "absolute")
+                    .style("font-size", 8)
+                
+                let message18 = "Northern rural area can highly benefit because most of the <br> households must commute outside their district to work and  <br> there seems to be currently no provision of public transport."
+                tooltip17.html(message18)
+                    .style("left", 425 + "px")
+                    .style("top", 200 + "px")
+
+                svg4
+                    .append('path')
+                    .attr('d', d3.line()([[320, 150], [490, 75]]))
+                    .attr('stroke', 'black')
+                    .attr('marker-start', 'url(#arrow)')
+                    .attr('fill', 'none')
+                    .attr("stroke-width",0.5)
+                    .attr("opacity",0.75)
+
+                let tooltip18 = d3.select("#container4").append("div") 
+                    .attr("class", "tooltip2")               
+                    .style("opacity", 1)
+                    .style("position", "absolute")
+                    .style("font-size", 8)
+                
+                let message19 = "This information is not reliable in the case of low-densely populated <br> areas because districts are more aggregated geographical units. <br> However, it is accurate in rural areas."
+                tooltip18.html(message19)
+                    .style("left", 425 + "px")
+                    .style("top", 275 + "px")
+
+                svg4
+                    .append('path')
+                    .attr('d', d3.line()([[320, 150], [490, 75]]))
+                    .attr('stroke', 'black')
+                    .attr('marker-start', 'url(#arrow)')
+                    .attr('fill', 'none')
+                    .attr("stroke-width",0.5)
+                    .attr("opacity",0.75)
+
+    }
+
+</script>
+
