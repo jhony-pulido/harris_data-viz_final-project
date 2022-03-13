@@ -381,17 +381,9 @@ const projection = d3.geoEqualEarth();
                 let int_system_routes = topojson.feature(raw2,raw2.objects.sistema_integrado) 
                 let subway = topojson.feature(raw2,raw2.objects.tunel_metro) 
                 let other_routes = topojson.feature(raw2,raw2.objects.rutas_otras) 
-                //let layer = topojson.feature(raw,raw.objects.edm_zones)  
-                //let state = topojson.feature(raw,raw.objects.state)
-                /* let california = topojson.feature(county,county.features.filter(d => d.properties.state_name =="California"))
-                let data = topojson.feature(county,county.features) */
-                
+
                 console.log(layer)
                 console.log(urban_routes)
-                //console.log(data)
-                //console.log(county.features.properties.NAME)
-                //console.log(county.features.properties.pop_18_in_poverty)
-             
 
                 //-----------------------------MAP------------------------------//
                 //Two main things are needed to generate a map: generate a path and define a projection:
@@ -682,7 +674,7 @@ const projection = d3.geoEqualEarth();
 
                 svg
                     .append('path')
-                    .attr('d', d3.line()([[540, 260], [290, 230]]))
+                    .attr('d', d3.line()([[540, 260], [300, 230]]))
                     .attr('stroke', 'black')
                     .attr('marker-start', 'url(#arrow)')
                     .attr('fill', 'none')
